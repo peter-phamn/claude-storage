@@ -1,0 +1,23 @@
+{
+  "eval_id": 3,
+  "eval_name": "deps-include-dirs-good-match",
+  "prompt": "Hi, can you check if my PR satisfies the ticket?\n\nTicket: PIQ-490 - Update dependencies and fix INCLUDE_DIRS initialization\n\nDescription:\nThe current INCLUDE_DIRS setup is fragile — it fails silently when directories don't exist. We need to make it robust. Also our external-communications package needs an update to v1.0.2 which includes bug fixes.\n\nAcceptance Criteria:\n1. INCLUDE_DIRS should be properly initialized even if some directories are missing\n2. Update external-communications to version 1.0.2\n3. Any changes to dependency versions must be reflected in package.json and package-lock.json\n4. Initialization errors should be logged rather than silently ignored",
+  "assertions": [
+    {
+      "text": "Report verdict is COMPLIANT or PARTIALLY COMPLIANT (the branch directly addresses these requirements)",
+      "type": "accuracy"
+    },
+    {
+      "text": "Report correctly identifies that external-communications was updated (visible in package.json diff)",
+      "type": "accuracy"
+    },
+    {
+      "text": "Report correctly identifies INCLUDE_DIRS initialization changes",
+      "type": "accuracy"
+    },
+    {
+      "text": "Report contains Overall Assessment, Requirements Coverage table, and Issues sections",
+      "type": "format"
+    }
+  ]
+}

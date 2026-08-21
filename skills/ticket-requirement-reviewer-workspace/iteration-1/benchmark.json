@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "skill_name": "ticket-requirement-reviewer",
+    "skill_path": "/Users/thanhpham/.claude/skills/ticket-requirement-reviewer",
+    "executor_model": "claude-sonnet-4-6",
+    "analyzer_model": "claude-sonnet-4-6",
+    "timestamp": "2026-05-11T15:51:33Z",
+    "evals_run": [1, 2, 3],
+    "runs_per_configuration": 1
+  },
+
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "logging-visibility-partial-match",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 69.7,
+        "tokens": 15898,
+        "tool_calls": 4,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Report contains an Overall Assessment section with COMPLIANT, PARTIALLY COMPLIANT, or NON-COMPLIANT verdict", "passed": true, "evidence": "Bold NON-COMPLIANT in Overall Assessment section"},
+        {"text": "Report lists all 6 acceptance criteria from the ticket and gives each a Met/Partial/Not Met status", "passed": true, "evidence": "Requirements Coverage table has all 6 rows"},
+        {"text": "At least one HIGH or MEDIUM issue is raised", "passed": true, "evidence": "5 HIGH + 1 MEDIUM issue raised"},
+        {"text": "Issues reference specific file names from the diff", "passed": true, "evidence": "References src/http/payment-iq.http.ts, terraform, package.json"},
+        {"text": "Report does NOT give a COMPLIANT verdict", "passed": true, "evidence": "Verdict is NON-COMPLIANT"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "logging-visibility-partial-match",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6,
+        "passed": 3,
+        "failed": 2,
+        "total": 5,
+        "time_seconds": 39.6,
+        "tokens": 13073,
+        "tool_calls": 3,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Report contains an Overall Assessment section with COMPLIANT, PARTIALLY COMPLIANT, or NON-COMPLIANT verdict", "passed": false, "evidence": "Has Overall Assessment but no explicit COMPLIANT/NON-COMPLIANT label"},
+        {"text": "Report lists all 6 acceptance criteria from the ticket and gives each a Met/Partial/Not Met status", "passed": true, "evidence": "All 6 criteria listed with NOT MET / CANNOT VERIFY"},
+        {"text": "At least one HIGH or MEDIUM issue is raised", "passed": false, "evidence": "No HIGH/MEDIUM/LOW categorization — uses freeform Recommended actions"},
+        {"text": "Issues reference specific file names from the diff", "passed": true, "evidence": "Table of changes references specific files"},
+        {"text": "Report does NOT give a COMPLIANT verdict", "passed": true, "evidence": "Says Requirements met: 0 out of 6"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "jwt-auth-no-match",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 48.0,
+        "tokens": 14301,
+        "tool_calls": 4,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Report verdict is NON-COMPLIANT", "passed": true, "evidence": "Bold NON-COMPLIANT in Overall Assessment"},
+        {"text": "Most or all of the 6 requirements are marked as Not Met", "passed": true, "evidence": "All 6 rows show Not Met"},
+        {"text": "At least 2 HIGH severity issues are raised", "passed": true, "evidence": "6 HIGH issues [H1]-[H6]"},
+        {"text": "Report does NOT fabricate JWT-related code that doesn't exist in the diff", "passed": true, "evidence": "Correctly states diff contains zero authentication code"},
+        {"text": "Report contains an Overall Assessment section with a verdict", "passed": true, "evidence": "Overall Assessment section with NON-COMPLIANT verdict present"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "jwt-auth-no-match",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 4,
+        "failed": 1,
+        "total": 5,
+        "time_seconds": 31.8,
+        "tokens": 12200,
+        "tool_calls": 2,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Report verdict is NON-COMPLIANT", "passed": true, "evidence": "Summary says does not implement any requirements"},
+        {"text": "Most or all of the 6 requirements are marked as Not Met", "passed": true, "evidence": "All 6 listed as NOT IMPLEMENTED"},
+        {"text": "At least 2 HIGH severity issues are raised", "passed": true, "evidence": "5 marked HIGH, 1 MEDIUM"},
+        {"text": "Report does NOT fabricate JWT-related code that doesn't exist in the diff", "passed": true, "evidence": "Correctly notes no JWT library added"},
+        {"text": "Report contains an Overall Assessment section with a verdict", "passed": false, "evidence": "No formal Overall Assessment section — just Summary and Conclusion"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "deps-include-dirs-good-match",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 41.0,
+        "tokens": 14652,
+        "tool_calls": 4,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Report verdict is COMPLIANT or PARTIALLY COMPLIANT", "passed": true, "evidence": "PARTIALLY COMPLIANT verdict"},
+        {"text": "Report correctly identifies that external-communications was updated", "passed": true, "evidence": "Identifies 1.0.7 update and flags mismatch with 1.0.2"},
+        {"text": "Report correctly identifies INCLUDE_DIRS initialization changes", "passed": true, "evidence": "Identifies EXISTING_DIRS loop in bash/process.env.sh"},
+        {"text": "Report contains Overall Assessment, Requirements Coverage table, and Issues sections", "passed": true, "evidence": "All three sections present with proper formatting"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "deps-include-dirs-good-match",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "time_seconds": 52.6,
+        "tokens": 15877,
+        "tool_calls": 9,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Report verdict is COMPLIANT or PARTIALLY COMPLIANT", "passed": true, "evidence": "PARTIALLY SATISFIES — 3 of 4 criteria met"},
+        {"text": "Report correctly identifies that external-communications was updated", "passed": true, "evidence": "AC2 section correctly identifies 1.0.7 vs 1.0.2"},
+        {"text": "Report correctly identifies INCLUDE_DIRS initialization changes", "passed": true, "evidence": "AC1 section correctly identifies EXISTING_DIRS loop"},
+        {"text": "Report contains Overall Assessment, Requirements Coverage table, and Issues sections", "passed": false, "evidence": "Has per-AC sections and summary table but lacks the structured Requirements Coverage table and formal Overall Assessment label"}
+      ],
+      "notes": []
+    }
+  ],
+
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 52.9, "stddev": 12.2, "min": 41.0, "max": 69.7},
+      "tokens": {"mean": 14950, "stddev": 685, "min": 14301, "max": 15898}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.72, "stddev": 0.08, "min": 0.6, "max": 0.8},
+      "time_seconds": {"mean": 41.3, "stddev": 8.6, "min": 31.8, "max": 52.6},
+      "tokens": {"mean": 13717, "stddev": 1569, "min": 12200, "max": 15877}
+    },
+    "delta": {
+      "pass_rate": "+0.28",
+      "time_seconds": "+11.6",
+      "tokens": "+1233"
+    }
+  },
+
+  "notes": [
+    "Format assertions are the key differentiator: skill enforces Overall Assessment verdict label, Requirements Coverage table, and labeled issues [H1]/[M1] — without_skill outputs lack these consistently",
+    "Analysis quality is similar: both correctly identify which requirements are met vs missing",
+    "Eval 2 (JWT no-match) shows clearest separation — with_skill produces 6 labeled HIGH issues vs ad-hoc format",
+    "Eval 3 (deps match) shows both versions correctly catch the version mismatch and missing logging requirement",
+    "Token overhead is modest (+1233) relative to the format quality improvement",
+    "Without-skill runs are faster on average (41s vs 53s) but lack structured output"
+  ]
+}

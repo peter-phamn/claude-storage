@@ -1,0 +1,27 @@
+{
+  "eval_id": 2,
+  "eval_name": "jwt-auth-no-match",
+  "prompt": "Please review my code changes against the ticket requirements below.\n\nTicket: PIQ-512 - Add JWT authentication to payment-iq API\n\nDescription:\nThe payment-iq service currently has no authentication. We need to add JWT-based auth to protect all endpoints.\n\nRequirements:\n1. All API endpoints must require a valid JWT token in the Authorization header\n2. JWT tokens should be validated against our shared secret (from env var JWT_SECRET)\n3. Requests with missing or invalid tokens must return 401 Unauthorized\n4. The decoded JWT payload should be available to request handlers\n5. A whitelist of public endpoints (e.g. /health) should bypass authentication\n6. Token expiry must be enforced",
+  "assertions": [
+    {
+      "text": "Report verdict is NON-COMPLIANT (the branch has no JWT auth implementation)",
+      "type": "accuracy"
+    },
+    {
+      "text": "Most or all of the 6 requirements are marked as Not Met",
+      "type": "accuracy"
+    },
+    {
+      "text": "At least 2 HIGH severity issues are raised",
+      "type": "severity"
+    },
+    {
+      "text": "Report does NOT fabricate JWT-related code that doesn't exist in the diff",
+      "type": "hallucination"
+    },
+    {
+      "text": "Report contains an Overall Assessment section with a verdict",
+      "type": "format"
+    }
+  ]
+}

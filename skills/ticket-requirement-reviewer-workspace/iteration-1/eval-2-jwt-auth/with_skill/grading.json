@@ -1,0 +1,33 @@
+{
+  "eval_id": 2,
+  "run": "with_skill",
+  "expectations": [
+    {
+      "text": "Report verdict is NON-COMPLIANT (the branch has no JWT auth implementation)",
+      "passed": true,
+      "evidence": "Bold '**NON-COMPLIANT**' in Overall Assessment section"
+    },
+    {
+      "text": "Most or all of the 6 requirements are marked as Not Met",
+      "passed": true,
+      "evidence": "All 6 rows in Requirements Coverage table show '❌ Not Met'"
+    },
+    {
+      "text": "At least 2 HIGH severity issues are raised",
+      "passed": true,
+      "evidence": "6 HIGH issues raised: [H1]-[H6], one per unimplemented requirement"
+    },
+    {
+      "text": "Report does NOT fabricate JWT-related code that doesn't exist in the diff",
+      "passed": true,
+      "evidence": "Report explicitly states 'The diff contains zero authentication code' — no fabrication"
+    },
+    {
+      "text": "Report contains an Overall Assessment section with a verdict",
+      "passed": true,
+      "evidence": "'## Overall Assessment' with NON-COMPLIANT verdict present"
+    }
+  ],
+  "pass_count": 5,
+  "total": 5
+}

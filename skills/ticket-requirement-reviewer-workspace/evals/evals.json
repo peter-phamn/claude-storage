@@ -1,0 +1,23 @@
+{
+  "skill_name": "ticket-requirement-reviewer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Can you review my PR against this ticket?\n\nTicket: PIQ-445 - Improve logging visibility for payment requests\n\nDescription:\nWe need better observability in the payment-iq service so that engineers can debug payment issues faster. Currently our logs are missing key data and the latency tracking is incomplete.\n\nAcceptance criteria:\n1. Log the full request payload (method, path, headers, body) for every incoming HTTP request\n2. Log response status and latency for every request\n3. Include correlation ID / trace ID in all log entries\n4. Log errors with full stack traces\n5. Latency logs should include breakdown (e.g. db time, external call time)\n6. All log fields should use consistent snake_case naming",
+      "expected_output": "A compliance report that identifies which of the 6 acceptance criteria are met, partially met, or not met by the current branch changes. Should correctly identify logging-related changes and flag any criteria without clear implementation.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Please review my code changes against the ticket requirements below.\n\nTicket: PIQ-512 - Add JWT authentication to payment-iq API\n\nDescription:\nThe payment-iq service currently has no authentication. We need to add JWT-based auth to protect all endpoints.\n\nRequirements:\n1. All API endpoints must require a valid JWT token in the Authorization header\n2. JWT tokens should be validated against our shared secret (from env var JWT_SECRET)\n3. Requests with missing or invalid tokens must return 401 Unauthorized\n4. The decoded JWT payload should be available to request handlers\n5. A whitelist of public endpoints (e.g. /health) should bypass authentication\n6. Token expiry must be enforced",
+      "expected_output": "A NON-COMPLIANT report showing that none or very few of the JWT authentication requirements are implemented in the current branch diff, since the branch is about logging and dependency updates.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Hi, can you check if my PR satisfies the ticket?\n\nTicket: PIQ-490 - Update dependencies and fix INCLUDE_DIRS initialization\n\nDescription:\nThe current INCLUDE_DIRS setup is fragile — it fails silently when directories don't exist. We need to make it robust. Also our external-communications package needs an update to v1.0.2 which includes bug fixes.\n\nAcceptance Criteria:\n1. INCLUDE_DIRS should be properly initialized even if some directories are missing\n2. Update external-communications to version 1.0.2\n3. Any changes to dependency versions must be reflected in package.json and package-lock.json\n4. Initialization errors should be logged rather than silently ignored",
+      "expected_output": "A COMPLIANT or PARTIALLY COMPLIANT report. The branch clearly updates external-communications and changes INCLUDE_DIRS initialization. The report should accurately identify which criteria are met based on the actual diff.",
+      "files": []
+    }
+  ]
+}

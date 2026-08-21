@@ -1,0 +1,174 @@
+{
+  "version": 2,
+  "plugins": {
+    "superpowers@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/claude-plugins-official/superpowers/6.3.0",
+        "version": "6.3.0",
+        "installedAt": "2026-04-24T04:14:11.108Z",
+        "lastUpdated": "2026-08-13T02:46:57.528Z",
+        "gitCommitSha": "6efe32c9e2dd002d0c394e861e0529675d1ab32e"
+      }
+    ],
+    "skill-creator@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/claude-plugins-official/skill-creator/unknown",
+        "version": "unknown",
+        "installedAt": "2026-05-05T03:49:46.286Z",
+        "lastUpdated": "2026-08-20T15:22:10.519Z"
+      }
+    ],
+    "typescript-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/claude-plugins-official/typescript-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-05-05T03:58:41.207Z",
+        "lastUpdated": "2026-05-05T03:58:41.207Z"
+      }
+    ],
+    "pyright-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/claude-plugins-official/pyright-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-05-05T03:58:46.783Z",
+        "lastUpdated": "2026-05-05T03:58:46.783Z"
+      }
+    ],
+    "code-review@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/claude-plugins-official/code-review/unknown",
+        "version": "unknown",
+        "installedAt": "2026-05-05T04:02:32.441Z",
+        "lastUpdated": "2026-08-20T15:22:10.517Z"
+      }
+    ],
+    "code-simplifier@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/claude-plugins-official/code-simplifier/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-05-05T04:02:35.449Z",
+        "lastUpdated": "2026-05-05T04:02:35.449Z"
+      }
+    ],
+    "github@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/claude-plugins-official/github/unknown",
+        "version": "unknown",
+        "installedAt": "2026-05-05T04:02:41.924Z",
+        "lastUpdated": "2026-08-20T15:22:10.515Z"
+      }
+    ],
+    "context7@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/claude-plugins-official/context7/unknown",
+        "version": "unknown",
+        "installedAt": "2026-05-05T04:17:24.791Z",
+        "lastUpdated": "2026-08-20T15:22:10.522Z"
+      }
+    ],
+    "feature-dev@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/claude-plugins-official/feature-dev/unknown",
+        "version": "unknown",
+        "installedAt": "2026-05-05T04:19:35.414Z",
+        "lastUpdated": "2026-08-20T15:22:10.513Z"
+      }
+    ],
+    "commit-commands@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/claude-plugins-official/commit-commands/unknown",
+        "version": "unknown",
+        "installedAt": "2026-05-05T04:22:52.979Z",
+        "lastUpdated": "2026-08-20T15:22:10.521Z"
+      }
+    ],
+    "pr-review-toolkit@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/claude-plugins-official/pr-review-toolkit/unknown",
+        "version": "unknown",
+        "installedAt": "2026-05-05T04:23:52.481Z",
+        "lastUpdated": "2026-08-20T15:22:10.516Z"
+      }
+    ],
+    "security-guidance@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/claude-plugins-official/security-guidance/2.0.7",
+        "version": "2.0.7",
+        "installedAt": "2026-05-05T04:23:59.955Z",
+        "lastUpdated": "2026-08-13T02:46:51.900Z"
+      }
+    ],
+    "claude-code-setup@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/claude-plugins-official/claude-code-setup/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-05-05T04:26:33.649Z",
+        "lastUpdated": "2026-05-05T04:26:33.649Z"
+      }
+    ],
+    "claude-mem@thedotmack": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/thedotmack/claude-mem/12.7.5",
+        "version": "12.7.5",
+        "installedAt": "2026-05-07T12:16:59.131Z",
+        "lastUpdated": "2026-05-07T12:16:59.131Z",
+        "gitCommitSha": "0a43ab7632ebedcd3c94cbb79a73df13ec41e9b0"
+      }
+    ],
+    "andrej-karpathy-skills@karpathy-skills": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/karpathy-skills/andrej-karpathy-skills/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-05-10T17:06:47.162Z",
+        "lastUpdated": "2026-05-10T17:06:47.162Z",
+        "gitCommitSha": "2c606141936f1eeef17fa3043a72095b4765b9c2"
+      }
+    ],
+    "understand-anything@understand-anything": [
+      {
+        "scope": "project",
+        "projectPath": "/Users/thanhpham/Projects/kwiff",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/understand-anything/understand-anything/2.8.1",
+        "version": "2.8.1",
+        "installedAt": "2026-07-01T16:51:22.863Z",
+        "lastUpdated": "2026-07-01T16:51:22.863Z",
+        "gitCommitSha": "54754a6f97051d1d76c8758353d8ea41afe502a6"
+      }
+    ],
+    "mattpocock-skills@mattpocock": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/mattpocock/mattpocock-skills/1.2.0",
+        "version": "1.2.0",
+        "installedAt": "2026-07-16T06:47:17.414Z",
+        "lastUpdated": "2026-07-16T06:47:17.414Z",
+        "gitCommitSha": "e9fcdf95b402d360f90f1db8d776d5dd450f9234"
+      }
+    ],
+    "ponytail@ponytail": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhpham/.claude/plugins/cache/ponytail/ponytail/4.8.4",
+        "version": "4.8.4",
+        "installedAt": "2026-07-17T09:30:37.787Z",
+        "lastUpdated": "2026-07-17T09:30:37.787Z",
+        "gitCommitSha": "16f29800fd2681bdf24f3eb4ccffe38be3baec6b"
+      }
+    ]
+  }
+}

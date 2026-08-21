@@ -1,0 +1,33 @@
+{
+  "eval_id": 1,
+  "run": "without_skill",
+  "expectations": [
+    {
+      "text": "Report contains an Overall Assessment section with COMPLIANT, PARTIALLY COMPLIANT, or NON-COMPLIANT verdict",
+      "passed": false,
+      "evidence": "Has 'Overall Assessment' but verdict is '0 out of 6' — no explicit COMPLIANT/NON-COMPLIANT label; format is freeform"
+    },
+    {
+      "text": "Report lists all 6 acceptance criteria from the ticket and gives each a Met/Partial/Not Met status",
+      "passed": true,
+      "evidence": "All 6 criteria listed with NOT MET / CANNOT VERIFY status"
+    },
+    {
+      "text": "At least one HIGH or MEDIUM issue is raised (since it's unlikely all 6 criteria are fully met by the diff)",
+      "passed": false,
+      "evidence": "No HIGH/MEDIUM/LOW categorization — uses freeform 'Recommended actions' instead of severity sections"
+    },
+    {
+      "text": "Issues reference specific file names from the diff rather than speaking in generalities",
+      "passed": true,
+      "evidence": "Table of 'Other Changes' references specific files: bash/process.env.sh, src/http/payment-iq.http.ts, terraform/lambda_env_vars.tf, etc."
+    },
+    {
+      "text": "Report does NOT give a COMPLIANT verdict (this is a partial match scenario)",
+      "passed": true,
+      "evidence": "Report says 'Requirements met: 0 out of 6' — clearly non-compliant"
+    }
+  ],
+  "pass_count": 3,
+  "total": 5
+}

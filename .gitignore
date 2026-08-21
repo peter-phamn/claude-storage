@@ -1,0 +1,16 @@
+# Allowlist: ignore everything by default, only track what's explicitly synced below.
+*
+
+!.gitignore
+!CLAUDE.md
+!RTK.md
+!settings.json
+!skills/
+!skills/**
+!commands/
+!commands/**
+!plugins/
+!plugins/marketplaces/
+!plugins/marketplaces/**
+!plugins/installed_plugins.json
+!plugins/known_marketplaces.json

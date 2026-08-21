@@ -1,0 +1,33 @@
+{
+  "eval_id": 1,
+  "run": "with_skill",
+  "expectations": [
+    {
+      "text": "Report contains an Overall Assessment section with COMPLIANT, PARTIALLY COMPLIANT, or NON-COMPLIANT verdict",
+      "passed": true,
+      "evidence": "Report has '## Overall Assessment' with bold '**NON-COMPLIANT**'"
+    },
+    {
+      "text": "Report lists all 6 acceptance criteria from the ticket and gives each a Met/Partial/Not Met status",
+      "passed": true,
+      "evidence": "Requirements Coverage table has all 6 rows with ❌ or ⚠️ status icons"
+    },
+    {
+      "text": "At least one HIGH or MEDIUM issue is raised (since it's unlikely all 6 criteria are fully met by the diff)",
+      "passed": true,
+      "evidence": "5 HIGH issues [H1]-[H5] and 1 MEDIUM issue [M1]"
+    },
+    {
+      "text": "Issues reference specific file names from the diff rather than speaking in generalities",
+      "passed": true,
+      "evidence": "References src/http/payment-iq.http.ts, terraform/lambda_env_vars.tf, package.json by name"
+    },
+    {
+      "text": "Report does NOT give a COMPLIANT verdict (this is a partial match scenario)",
+      "passed": true,
+      "evidence": "Verdict is NON-COMPLIANT — correct for a branch that doesn't directly implement logging features in app code"
+    }
+  ],
+  "pass_count": 5,
+  "total": 5
+}

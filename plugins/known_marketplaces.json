@@ -1,0 +1,58 @@
+{
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "/Users/thanhpham/.claude/plugins/marketplaces/claude-plugins-official",
+    "lastUpdated": "2026-08-20T15:22:10.291Z"
+  },
+  "superpowers-dev": {
+    "source": {
+      "source": "git",
+      "url": "https://github.com/obra/superpowers.git"
+    },
+    "installLocation": "/Users/thanhpham/.claude/plugins/marketplaces/superpowers-dev",
+    "lastUpdated": "2026-04-24T04:13:56.465Z"
+  },
+  "thedotmack": {
+    "source": {
+      "source": "github",
+      "repo": "thedotmack/claude-mem"
+    },
+    "installLocation": "/Users/thanhpham/.claude/plugins/marketplaces/thedotmack",
+    "lastUpdated": "2026-05-07T12:16:42.333Z"
+  },
+  "karpathy-skills": {
+    "source": {
+      "source": "github",
+      "repo": "forrestchang/andrej-karpathy-skills"
+    },
+    "installLocation": "/Users/thanhpham/.claude/plugins/marketplaces/karpathy-skills",
+    "lastUpdated": "2026-05-10T17:06:25.419Z"
+  },
+  "understand-anything": {
+    "source": {
+      "source": "github",
+      "repo": "Egonex-AI/Understand-Anything"
+    },
+    "installLocation": "/Users/thanhpham/.claude/plugins/marketplaces/understand-anything",
+    "lastUpdated": "2026-07-01T16:50:41.251Z"
+  },
+  "mattpocock": {
+    "source": {
+      "source": "github",
+      "repo": "mattpocock/skills"
+    },
+    "installLocation": "/Users/thanhpham/.claude/plugins/marketplaces/mattpocock",
+    "lastUpdated": "2026-07-16T05:49:40.457Z"
+  },
+  "ponytail": {
+    "source": {
+      "source": "github",
+      "repo": "DietrichGebert/ponytail"
+    },
+    "installLocation": "/Users/thanhpham/.claude/plugins/marketplaces/ponytail",
+    "lastUpdated": "2026-07-17T09:29:09.638Z"
+  }
+}

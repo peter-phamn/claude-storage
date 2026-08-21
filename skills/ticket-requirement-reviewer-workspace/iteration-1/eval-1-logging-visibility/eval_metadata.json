@@ -1,0 +1,27 @@
+{
+  "eval_id": 1,
+  "eval_name": "logging-visibility-partial-match",
+  "prompt": "Can you review my PR against this ticket?\n\nTicket: PIQ-445 - Improve logging visibility for payment requests\n\nDescription:\nWe need better observability in the payment-iq service so that engineers can debug payment issues faster. Currently our logs are missing key data and the latency tracking is incomplete.\n\nAcceptance criteria:\n1. Log the full request payload (method, path, headers, body) for every incoming HTTP request\n2. Log response status and latency for every request\n3. Include correlation ID / trace ID in all log entries\n4. Log errors with full stack traces\n5. Latency logs should include breakdown (e.g. db time, external call time)\n6. All log fields should use consistent snake_case naming",
+  "assertions": [
+    {
+      "text": "Report contains an Overall Assessment section with COMPLIANT, PARTIALLY COMPLIANT, or NON-COMPLIANT verdict",
+      "type": "format"
+    },
+    {
+      "text": "Report lists all 6 acceptance criteria from the ticket and gives each a Met/Partial/Not Met status",
+      "type": "completeness"
+    },
+    {
+      "text": "At least one HIGH or MEDIUM issue is raised (since it's unlikely all 6 criteria are fully met by the diff)",
+      "type": "accuracy"
+    },
+    {
+      "text": "Issues reference specific file names from the diff rather than speaking in generalities",
+      "type": "specificity"
+    },
+    {
+      "text": "Report does NOT give a COMPLIANT verdict (this is a partial match scenario)",
+      "type": "accuracy"
+    }
+  ]
+}

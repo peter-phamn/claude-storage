@@ -1,0 +1,28 @@
+{
+  "eval_id": 3,
+  "run": "without_skill",
+  "expectations": [
+    {
+      "text": "Report verdict is COMPLIANT or PARTIALLY COMPLIANT (the branch directly addresses these requirements)",
+      "passed": true,
+      "evidence": "Verdict is 'PARTIALLY SATISFIES — 3 of 4 acceptance criteria met'"
+    },
+    {
+      "text": "Report correctly identifies that external-communications was updated (visible in package.json diff)",
+      "passed": true,
+      "evidence": "AC2 section correctly identifies 1.0.7 vs ticket's 1.0.2 requirement"
+    },
+    {
+      "text": "Report correctly identifies INCLUDE_DIRS initialization changes",
+      "passed": true,
+      "evidence": "AC1 section correctly identifies the EXISTING_DIRS loop in bash/process.env.sh"
+    },
+    {
+      "text": "Report contains Overall Assessment, Requirements Coverage table, and Issues sections",
+      "passed": false,
+      "evidence": "Has individual AC sections and a summary table but lacks the skill's structured 'Requirements Coverage' table and formal 'Overall Assessment' with verdict label"
+    }
+  ],
+  "pass_count": 3,
+  "total": 4
+}
